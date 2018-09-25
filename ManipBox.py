@@ -10,22 +10,22 @@ def ManiCusMove():
     cmds.manipMoveContext("Move", e=True, m=6)
 
 def ManiObjScale():
-    cmds.manipMoveContext("Scale", e=True, m=0)
+    cmds.manipScaleContext("Scale", e=True, m=0)
 
 def ManiWrdScale():
-    cmds.manipMoveContext("Scale", e=True, m=2)
+    cmds.manipScaleContext("Scale", e=True, m=2)
 
 def ManiCusScale():
-    cmds.manipMoveContext("Scale", e=True, m=6)
+    cmds.manipScaleContext("Scale", e=True, m=6)
 
 def ManiObjRotate():
-    cmds.manipMoveContext("Rotate", e=True, m=0)
+    cmds.manipRotateContext("Rotate", e=True, m=0)
 
 def ManiWrdRotate():
-    cmds.manipMoveContext("Rotate", e=True, m=2)
+    cmds.manipRotateContext("Rotate", e=True, m=2)
 
 def ManiCusRotate():
-    cmds.manipMoveContext("Rotate", e=True, m=6)
+    cmds.manipRotateContext("Rotate", e=True, m=6)
 
 cmds.window(title='ManipBox', w=150)
 cmds.columnLayout(adj=True)

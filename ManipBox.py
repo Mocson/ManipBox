@@ -1,19 +1,54 @@
 import maya.cmds as cmds
 
-def ManiObj():
+def ManiObjMove():
     cmds.manipMoveContext("Move", e=True, m=0)
 
-def ManiWrd():
+def ManiWrdMove():
     cmds.manipMoveContext("Move", e=True, m=2)
 
-def ManiCus():
+def ManiCusMove():
     cmds.manipMoveContext("Move", e=True, m=6)
+
+def ManiObjScale():
+    cmds.manipMoveContext("Scale", e=True, m=0)
+
+def ManiWrdScale():
+    cmds.manipMoveContext("Scale", e=True, m=2)
+
+def ManiCusScale():
+    cmds.manipMoveContext("Scale", e=True, m=6)
+
+def ManiObjRotate():
+    cmds.manipMoveContext("Rotate", e=True, m=0)
+
+def ManiWrdRotate():
+    cmds.manipMoveContext("Rotate", e=True, m=2)
+
+def ManiCusRotate():
+    cmds.manipMoveContext("Rotate", e=True, m=6)
 
 cmds.window(title='ManipBox', w=150)
 cmds.columnLayout(adj=True)
-cmds.button( label = 'Object', w=100, h=40, command='ManiObj()')
-cmds.button( label = 'World', w=100, h=40, command='ManiWrd()')
-cmds.button( label = 'Custom', w=100, h=40, command='ManiCus()')
-cmds.textField('tFld')
+
+cmds.separator( h=3 )
+cmds.text("World")
+cmds.separator( h=3 )
+cmds.button( label = 'Object', w=100, h=20, command='ManiObjMove()')
+cmds.button( label = 'World', w=100, h=20, command='ManiWrdMove()')
+cmds.button( label = 'Custom', w=100, h=20, command='ManiCusMove()')
+
+cmds.separator( h=3 )
+cmds.text("Scale")
+cmds.separator( h=3 )
+cmds.button( label = 'Object', w=100, h=20, command='ManiObjScale()')
+cmds.button( label = 'World', w=100, h=20, command='ManiWrdScale()')
+cmds.button( label = 'Custom', w=100, h=20, command='ManiCusScale()')
+
+cmds.separator( h=3 )
+cmds.text("Rotate")
+cmds.separator( h=3 )
+cmds.button( label = 'Object', w=100, h=20, command='ManiObjRotate()')
+cmds.button( label = 'World', w=100, h=20, command='ManiWrdRotate()')
+cmds.button( label = 'Custom', w=100, h=20, command='ManiCusRotate()')
 
 cmds.showWindow()
